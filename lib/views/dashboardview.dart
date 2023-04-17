@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:project2/providers/dashboard_provider.dart';
 import 'package:project2/views/berita_panelview.dart';
+import 'package:project2/views/peta_view.dart';
 import 'package:provider/provider.dart';
 
 class DashboardView extends StatelessWidget {
@@ -62,7 +63,21 @@ class DashboardPanel extends StatelessWidget {
                       ),
                       TombolMenu(
                         image: Image.asset('assets/icon3.png', width: 60),
-                      )
+                      ),
+                      
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (c)=>PetaView(),
+                            ),
+                          );
+                        },
+                        child: TombolMenu(
+                          image: Image.asset('assets/icon3.png', width: 60),
+                        ),
+                      ),
                     ],
                   )
                 ],
